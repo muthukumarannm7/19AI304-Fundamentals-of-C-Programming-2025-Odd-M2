@@ -56,7 +56,50 @@
 ### Step 11:
   Stop
 # Program:
+```
+#include <stdio.h>
+
+int main() { float math, science, english; float average;
+
+// Input marks
+printf("Enter marks for Math: ");
+scanf("%f", &math);
+
+printf("Enter marks for Science: ");
+scanf("%f", &science);
+
+printf("Enter marks for English: ");
+scanf("%f", &english);
+
+// Calculate average
+average = (math + science + english) / 3.0;
+
+// Display average
+printf("\nAverage Marks = %.2f\n", average);
+
+// Determine grade using nested if-else
+if (average >= 90.0) {
+    printf("Grade: A\n");
+} 
+else {
+    if (average >= 75.0) {
+        printf("Grade: B\n");
+    } 
+    else {
+        if (average >= 50.0) {
+            printf("Grade: C\n");
+        } 
+        else {
+            printf("Grade: F\n");
+        }
+    }
+}
+
+return 0;
+```
 # Output:
+<img width="441" height="242" alt="image" src="https://github.com/user-attachments/assets/210c5364-d595-467a-9d73-780d91949fe7" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -88,7 +131,22 @@ Thus, the program was implemented and executed successfully, and the required ou
   Stop
 
 # Program:
+```
+#include <stdio.h>
+
+int main() { int num = 15;
+
+printf("Multiplication Table of %d:\n\n", num);
+
+for (int i = 1; i <= 10; i++) {
+    printf("%d x %d = %d\n", num, i, num * i);
+}
+
+return 0;
+```
 # Output:
+<img width="541" height="402" alt="image" src="https://github.com/user-attachments/assets/0dc6890d-0bb6-4563-97bb-d1310f115eac" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -131,7 +189,40 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 7:   
   Stop
 # Program:
+```
+#include <stdio.h>
+
+int main() { int num, i, isPrime = 1;
+
+// Input number
+printf("Enter a number: ");
+scanf("%d", &num);
+
+// Numbers less than or equal to 1 are not prime
+if (num <= 1) {
+    isPrime = 0;
+} 
+else {
+    // Check divisibility from 2 to num/2
+    for (i = 2; i <= num / 2; i++) {
+        if (num % i == 0) {
+            isPrime = 0;
+            break;
+        }
+    }
+}
+
+// Output result
+if (isPrime)
+    printf("%d is a Prime number.\n", num);
+else
+    printf("%d is NOT a Prime number.\n", num);
+
+return 0;
+```
 # Output:
+<img width="468" height="152" alt="image" src="https://github.com/user-attachments/assets/80d7abc5-849d-41a4-9c65-48dbef064976" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -179,7 +270,40 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:   
   Stop
 # Program:
+```
+#include <stdio.h>
+
+int main() { int i, j;
+
+// First row
+for (j = 1; j <= 5; j++) {
+    printf("%d", j);
+}
+printf("\n");
+
+// Middle rows
+for (i = 2; i <= 4; i++) {
+    for (j = 1; j <= 5; j++) {
+        if (j == 1)
+            printf("%d", i);
+        else if (j == 5)
+            printf("%d", 6 - i);
+        else
+            printf(" ");
+    }
+    printf("\n");
+}
+
+// Last row
+for (j = 5; j >= 1; j--) {
+    printf("%d", j);
+}
+
+return 0;
+```
 # Output:
+<img width="181" height="210" alt="image" src="https://github.com/user-attachments/assets/faa045dd-c664-4e74-b3b3-1f7573d597a7" />
+
 # Result: 
   Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -232,6 +356,41 @@ Thus, the program was implemented and executed successfully, and the required ou
   Decrease i by 1 and go back to Step 6.
 ### Step 8:
   Stop
+### Program:
+```
+#include <stdio.h>
+
+int main() { int i, j;
+
+// First row
+for (j = 1; j <= 5; j++) {
+    printf("%d", j);
+}
+printf("\n");
+
+// Middle rows
+for (i = 2; i <= 4; i++) {
+    for (j = 1; j <= 5; j++) {
+        if (j == 1)
+            printf("%d", i);
+        else if (j == 5)
+            printf("%d", 6 - i);
+        else
+            printf(" ");
+    }
+    printf("\n");
+}
+
+// Last row
+for (j = 5; j >= 1; j--) {
+    printf("%d", j);
+}
+
+return 0;
+```
+###Output:
+<img width="401" height="310" alt="image" src="https://github.com/user-attachments/assets/8ab45a05-8e92-45f3-b75f-7a3b1cd7c63b" />
+
 # Result:
   Thus, the program was implemented and executed successfully, and the required output was obtained.
 
